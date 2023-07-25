@@ -12,15 +12,16 @@
 
             <tr>
                 <td colspan="4">
-                    <input type="text" name="result" placeholder="0" style="text-align: right;">
+                    <div id="result" style="text-align: right;">
+                    </div>
                 </td>
             </tr>
-
+            
             <tr>
                 <td><button type="button" value="sin" onclick="calculateSin()">Sin</button></td>
                 <td><button type="button" value="cos" onclick="calculateCos()">Cos</button></td>
                 <td><button type="button" value="tan" onclick="calculateTan()">Tan</button></td>
-                <td><button type="button" value="C" onclick="clear()">AC</button></td>
+                <td><button id="clear" type="button" value="C" onclick="removeEquation()">AC</button></td>
             </tr>
 
             <tr>
@@ -28,40 +29,39 @@
                 <td><button type="button" value="x^3" onclick="calculateCube()">X^3</button></td>
                 <td><button type="button" value="sqrt2" onclick="calculateSquareRoot()">Sqrt</button></td>
                 <td><button type="button" value="sqrt3" onclick="calculateCubeRoot()">cubrt</button></td>
+            </tr> 
+
+            <tr>
+                <td><button type="button" value="1" onclick="appendToEquation(event)">1</button></td>
+                <td><button type="button" value="2" onclick="appendToEquation(event)">2</button></td>
+                <td><button type="button" value="3" onclick="appendToEquation(event)">3</button></td>
+                <td><button type="button" value="Backspace" onclick="clearLastNumber()">clear</button></td>
             </tr>
 
             <tr>
-                <td><button type="button" value="1" onclick="number(value)">1</button></td>
-                <td><button type="button" value="2" onclick="number(value)">2</button></td>
-                <td><button type="button" value="3" onclick="number(value)">3</button></td>
-                <td><button type="button" value="Backspace" onclick="removeLastDigit()">clear</button></td>
+                <td><button type="button" value="4" onclick="appendToEquation(event)">4</button></td>
+                <td><button type="button" value="5" onclick="appendToEquation(event)">5</button></td>
+                <td><button type="button" value="6" onclick="appendToEquation(event)">6</button></td>
+                <td><button type="button" value="-" onclick="appendToEquation(event)">-</button></td>
             </tr>
 
             <tr>
-                <td><button type="button" value="4" onclick="number(value)">4</button></td>
-                <td><button type="button" value="5" onclick="number(value)">5</button></td>
-                <td><button type="button" value="6" onclick="number(value)">6</button></td>
-                <td><button type="button" value="-" onclick="number(value)">-</button></td>
+                <td><button type="button" value="7" onclick="appendToEquation(event)">7</button></td>
+                <td><button type="button" value="8" onclick="appendToEquation(event)">8</button></td>
+                <td><button type="button" value="9" onclick="appendToEquation(event)">9</button></td>
+                <td><button type="button" value="/" onclick="appendToEquation(event)">/</button></td>
             </tr>
 
             <tr>
-                <td><button type="button" value="7" onclick="number(value)">7</button></td>
-                <td><button type="button" value="8" onclick="number(value)">8</button></td>
-                <td><button type="button" value="9" onclick="number(value)">9</button></td>
-                <td><button type="button" value="/" onclick="number(value)">/</button></td>
-            </tr>
-
-
-            <tr>
-                <td><button type="button" value="." onclick="number(value)">.</button></td>
-                <td><button type="button" value="0" onclick="number(value)">0</button></td>
-                <td><button type="button" value="%" onclick="number(value)">%</button></td>
-                <td><button type="button" value="*" onclick="number(value)">*</button></td>
+                <td><button type="button" value="." onclick="appendToEquation(event)">.</button></td>
+                <td><button type="button" value="0" onclick="appendToEquation(event)">0</button></td>
+                <td><button type="button" value="%" onclick="appendToEquation(event)">%</button></td>
+                <td><button type="button" value="*" onclick="appendToEquation(event)">*</button></td>
             </tr>
 
             <tr>
-                <td colspan="2"><button type="button" value="+" onclick="number(value)" class="addition">+</button></td>
-                <td colspan="2"><button type="button" value="=" onclick="finalAns()" class="equal">=</button></td>
+                <td colspan="2"><button type="button" value="+" onclick="appendToEquation(event)" class="addition">+</button></td>
+                <td colspan="2"><button type="button" value="=" onclick="calculateResult(event)" class="equal">=</button></td>
             </tr>
 
         </table>

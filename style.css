@@ -18,7 +18,10 @@ button.equal{
 button.addition{
     width: 88%;
 }
-input{
+#result{
+    justify-content: end;
+    display: flex;
+    align-items: center;
     width: 400px;
     height: 70px;
     padding: 10px 20px;
